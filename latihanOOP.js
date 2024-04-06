@@ -60,7 +60,6 @@ sapi.bernapas();
 sapi.menyusui();
 
 //polymorphism (polimorfisme)
-
 class Hewan {
     berbunyi() {
         console.log("Suara hewan generik");
@@ -81,4 +80,28 @@ class Kucing extends Hewan {
 
 const anjing = new Anjing();
 const kucing = new Kucing();
+
+//encapsulation
+class Orang {
+    #nama;
+
+    constructor(nama) {
+        this.#nama = nama;
+    }
+
+    getNama() {
+        return this.#nama;
+    }
+
+    setNama(nama) {
+        this.#nama = nama;
+    }
+}
+
+const orang = new Orang('Jamal');
+console.log(orang.getNama());
+
+orang.setNama('Siti');
+console.log(orang.getNama());
+
 
